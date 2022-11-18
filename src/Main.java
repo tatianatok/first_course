@@ -147,6 +147,25 @@ public class Main {
         for (int i = reverseFullName.length-1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println(" ");
+
+//Задание 1
+        String firstName = "Ivan ";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov ";
+        String fullName = " ";
+        fullName = fullName + lastName + firstName + middleName;
+        System.out.println("ФИО сотрудника —" + fullName + " ");
+
+//Задание 2
+        String fullName1 = fullName.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName1);
+
+//Задание 3
+        String fullName2 = "Иванов Семён Семёнович";
+        String newLetter = fullName2.replace('ё','е');
+        System.out.println("Данные ФИО сотрудника — " + newLetter);
+
     }
 }
 
