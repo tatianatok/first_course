@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -101,8 +102,8 @@ public class Main {
             arr[i] = random.nextInt(100_000) + 100_000;
             sum += arr[i];
         }
-            System.out.println("Сумма трат за месяц составила " + sum  + " рублей");
-            // return arr;
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        // return arr;
 
 //Задание 2
 //Следующая задача — найти минимальную и максимальную трату за день. Нужно написать программу, которая решит
@@ -111,11 +112,11 @@ public class Main {
 
         int max = arr[0], min = arr[0];
         for (int i = 0; i < arr.length; i++) {
-          if(arr[i] > max)
-            max = arr[i];
-          if(arr[i] < min)
-            min = arr[i];
-    }
+            if (arr[i] > max)
+                max = arr[i];
+            if (arr[i] < min)
+                min = arr[i];
+        }
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей." +
                 " Максимальная сумма трат за день составила " + max + " рублей.");
 
@@ -127,7 +128,7 @@ public class Main {
 //
 //**Важно помнить:** подсчет среднего значения может иметь остаток (то есть быть не целым, а дробным числом).
 
-        double average = sum/arr.length;
+        double average = sum / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + average + " рублей.");
 
 //Задание 4
@@ -142,13 +143,87 @@ public class Main {
 //**Важно**: не используйте дополнительные массивы для решения этой задачи. Необходимо корректно пройти
 // по массиву циклом и распечатать его элементы в правильном порядке.
 
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println(reverseFullName);
-        for (int i = reverseFullName.length-1; i >= 0; i--) {
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println(" ");
+
+//Задание 1
+        String firstName = "Ivan ";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov ";
+        String fullName = " ";
+        fullName = fullName + lastName + firstName + middleName;
+        System.out.println("ФИО сотрудника —" + fullName + " ");
+
+//Задание 2
+        String fullName1 = fullName.toUpperCase();
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName1);
+
+//Задание 3
+        String fullName2 = "Иванов Семён Семёнович";
+        String newLetter = fullName2.replace('ё', 'е');
+        System.out.println("Данные ФИО сотрудника — " + newLetter);
+        System.out.println(" ");
+
+
+//Задание 1
+        int year = 2020;
+        printLeapYear(year);
+    }
+
+    public static void printLeapYear(int year) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println(year + " — високосный год");
+        } else {
+            System.out.println(year + " — невисокосный год");
+        }
+        System.out.println(" ");
+
+
+//Задание 2
+        int clientDeviceOs = 1;
+        int clientDeviceYear = 2015;
+
+        if (clientDeviceOs == 0) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите приложение для iOS по ссылке");
+            }
+        } else {
+            if (clientDeviceOs == 1) {
+                if (clientDeviceYear < 2015) {
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                } else {
+                    System.out.println("Установите приложение для Android по ссылке");
+                }
+            }
+        }
+
+//Задание 3
+        int deliveryDistance = 95;
+        int days = 1;
+
+        if (deliveryDistance > 20) {
+            days++;
+        }
+        if (deliveryDistance > 60) {
+            days++;
+        }
+        System.out.println("Потребуется дней: " + days);
     }
 }
+
+
+
+
+
+
+
+
 
 
 
