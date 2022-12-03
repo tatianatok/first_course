@@ -169,12 +169,12 @@ public class Main {
         System.out.println(" ");
 
 
-//Задание 1
+        //Задание 1
         int year = 2020;
         printLeapYear(year);
     }
 
-    public static void printLeapYear(int year) {
+    private static void printLeapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " — високосный год");
         } else {
@@ -182,32 +182,33 @@ public class Main {
         }
         System.out.println(" ");
 
-
 //Задание 2
-        int clientDeviceOs = 1;
-        int clientDeviceYear = 2015;
+        // int clientDeviceOs = 1;
+        // int clientDeviceYear = 2015;
 
-        if (clientDeviceOs == 0) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите приложение для iOS по ссылке");
-            }
-        } else {
-            if (clientDeviceOs == 1) {
-                if (clientDeviceYear < 2015) {
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                } else {
-                    System.out.println("Установите приложение для Android по ссылке");
-                }
-            }
-        }
+        //   if (clientDeviceOs == 0) {
+        // if (clientDeviceYear < 2015) {
+        // System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        //  } else {
+        //System.out.println("Установите приложение для iOS по ссылке");
+        //  }
+        //  } else {
+        // if (clientDeviceOs == 1) {
+        //  if (clientDeviceYear < 2015) {
+        //  System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        //   } else {
+        //  System.out.println("Установите приложение для Android по ссылке");
+        //  }
+        //   }
+        //   }
 
 //Задание 3
-        int deliveryDistance = 95;
-        int days = 1;
 
-        if (deliveryDistance > 20) {
+    int deliveryDistance = 40;
+    int days = 1;
+    countDistance(deliveryDistance);
+
+       if (deliveryDistance > 20) {
             days++;
         }
         if (deliveryDistance > 60) {
@@ -215,7 +216,16 @@ public class Main {
         }
         System.out.println("Потребуется дней: " + days);
     }
+
+    private static void countDistance(int deliveryDistance) {
+
+    }
 }
+
+
+
+
+
 
 
 
