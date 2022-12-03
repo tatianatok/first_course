@@ -26,7 +26,6 @@ public class Book {
     public String toString() {
         return "Книга: " + this.titleBook + "; Автор: " + this.author + "; Дата публикации: " + this.date;
     }
-
     public int getDate() {
         return this.date;
     }

@@ -15,6 +15,7 @@ public class MainObjectsAndClasses {
 
         book1.setDate(1831);
 
+
         System.out.println(book1);
         System.out.println(book2);
     }
